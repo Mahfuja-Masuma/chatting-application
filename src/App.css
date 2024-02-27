@@ -1,0 +1,183 @@
+body {
+    @apply font-poppins;
+}
+
+/* Button styles */
+.buttons_v_1 {
+    @apply bg-tertinery text-white px-5 py-2 font-bold text-lg rounded-lg w-full transition hover:bg-secodary;
+}
+.buttons_v_2 {
+    @apply bg-orange-400 text-white px-3 py-1 font-bold text-sm rounded-lg w-full transition hover:bg-blue-600;
+}
+.buttons_v_3 {
+    @apply bg-tertinery text-white px-3 py-1 font-bold text-sm rounded-lg w-full transition hover:bg-secodary;
+}
+.buttons_v_4 {
+    @apply bg-red-600 text-white px-3 py-1 font-bold text-sm rounded-lg w-full transition hover:bg-secodary;
+}
+.buttons_v_5 {
+    @apply bg-five text-red-600 px-3 py-1 font-bold text-sm rounded-lg w-full transition hover:bg-secodary;
+}
+.buttons_v_6 {
+    @apply bg-blue-600 text-white px-3 py-1 font-bold text-sm rounded-lg w-full transition hover:bg-tertinery;
+}
+
+/* Registration styles */
+.registration h1 {
+    @apply text-center font-bold text-3xl sm:text-4xl text-tertinery uppercase font-poppins;
+}
+
+.registration input {
+    @apply w-full my-4 sm:my-5 border border-five px-4 py-3 rounded-lg outline-tertinery;
+}
+
+.registration .registration-form {
+    @apply shadow-2xl p-4 rounded-lg;
+}
+
+.error-message {
+    @apply text-red-500 text-sm;
+}
+
+/* Login styles */
+.form-heading {
+    @apply bg-tertinery text-primary p-3 text-center font-bold text-3xl rounded-lg;
+}
+
+/* Forgot password styles */
+#forgotpassword h1 {
+    @apply text-2xl sm:text-3xl text-tertinery mb-3 sm:mb-5 font-bold text-center capitalize;
+}
+
+#forgotpassword input {
+    @apply w-full my-4 sm:my-5 border border-five px-4 py-3 rounded-lg outline-tertinery;
+}
+
+/* Navbar styles */
+nav .profileAndName {
+    @apply flex items-center gap-3 sm:gap-5;
+}
+
+nav .profileAndName .img {
+    @apply w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] rounded-full bg-gray-500;
+}
+
+nav .profileAndName h2 {
+    @apply text-xl sm:text-2xl font-medium capitalize text-white;
+}
+
+nav .menu_items {
+    @apply flex gap-5 sm:gap-10;
+}
+
+nav .menu_items svg,
+nav .logout_items svg {
+    @apply text-3xl sm:text-4xl;
+}
+
+nav .active {
+    @apply hover:text-tertinery transition-all;
+}
+
+.defaultPPic {
+    @apply absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%];
+}
+
+#navbar .overlay {
+    @apply absolute left-0 top-0 w-full h-full rounded-full bg-tertinery cursor-pointer;
+}
+
+#navbar .overlay svg {
+    @apply absolute text-5xl text-white left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%];
+}
+
+.modal {
+    @apply h-full w-full bg-secodary absolute left-0 top-0 z-[999] flex justify-center items-center;
+}
+
+.modal .profileImg {
+    @apply w-[50%] p-10 rounded-lg bg-white;
+}
+
+.modal .profileImg h2 {
+    @apply capitalize text-2xl font-bold text-secodary;
+}
+
+/* Media Queries for Small Devices */
+@media (max-width: 640px) {
+    .registration h1,
+    .form-heading,
+    #forgotpassword h1 {
+        @apply text-2xl;
+    }
+
+    .registration input,
+    #forgotpassword input {
+        @apply my-3;
+    }
+}
+
+/* Main content styles */
+.main_content {
+    @apply p-3 flex flex-wrap gap-5 mt-5;
+}
+
+.main_content .item {
+    @apply w-[48%] md:w-[32%] h-[320px] overflow-y-scroll pb-4 pl-4 pr-4 border-2 border-tertinery rounded-xl shadow-xl;
+}
+
+.main_content .title {
+    @apply  flex items-center justify-between w-full bg-white sticky py-3 left-0 top-0;
+}
+
+.main_content .title h3,
+.main_content .title svg {
+    @apply text-lg sm:text-2xl font-medium text-tertinery;
+}
+
+
+/* Group list styles */
+.list {
+    @apply flex flex-wrap justify-between items-center max-w-screen-md mx-auto ;
+}
+
+.list .img {
+    @apply h-[50px] w-[50px] sm:h-[65px] sm:w-[65px] rounded-full overflow-hidden bg-secodary;
+}
+
+.list h2 {
+    @apply text-base font-medium text-black capitalize;
+}
+
+
+/* chat part start */
+.chat {
+    @apply w-[100%]  h-[350px] overflow-y-scroll pb-4 pl-4 pr-4 border-2 border-tertinery rounded-xl mt-3;
+}
+.chat_item .title {
+    @apply  flex items-center justify-between w-full bg-white sticky py-3 left-0 top-0;
+}
+
+.chat_item .title h3,
+.chat_item .title svg {
+    @apply text-lg sm:text-2xl font-medium text-tertinery;
+}
+/* chat part end */
+
+
+/* Media Queries for Small Devices */
+@media (max-width: 768px) {
+    .main_content .item {
+        @apply w-full;
+    }
+}
+
+
+::-webkit-scrollbar{
+    @apply w-[5px]
+    
+}
+::-webkit-scrollbar-thumb{
+    @apply bg-secodary rounded-2xl
+
+}
