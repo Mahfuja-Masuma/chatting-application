@@ -38,7 +38,7 @@ const Navbar = () => {
   const handleLogout = () => {
     signOut(auth)
       .then(() => {
-        navigate("/login");
+        navigate("/");
         dispatch(userLoginInfo(null));
         localStorage.removeItem("user");
       })

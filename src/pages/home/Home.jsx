@@ -15,7 +15,7 @@ const Home = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (!data) {
-      navigate("/login");
+      navigate("/");
     }
   });
   return (

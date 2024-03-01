@@ -14,7 +14,7 @@ import {
 } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
 
-const Registration = () => {
+const SignUp = () => {
   const auth = getAuth();
   const db = getDatabase();
   const navigate = useNavigate();
@@ -124,7 +124,7 @@ const Registration = () => {
               console.log(user)
               toast.success("Registration successfully");
               setLoader(false);
-              navigate("/login");
+              navigate("/");
             })
             .then(()=>{
               set(ref(db, 'users/' + auth.currentUser.uid), {
@@ -246,4 +246,4 @@ const Registration = () => {
   );
 };
 
-export default Registration;
+export default SignUp;

@@ -1,6 +1,6 @@
 
 import './App.css'
-import Registration from './pages/registration/Registration'
+import SignUp from './pages/registration/SignUp'
 import Login from './pages/login/Login'
 import firebaseConfig from './firebase.config'
 import { Routes,Route } from "react-router-dom";
@@ -16,7 +16,7 @@ function App() {
 
  <Routes>
  <Route path="/" element={<Login/>}/>
- <Route path="/signup" element={<Registration/>}/>
+ <Route path="/signup" element={<SignUp/>}/>
  <Route path="/forgotpassword" element={<Forgotpassword/>}/>
  <Route path="/home" element={<Home/>}/>
  <Route path="/chat" element={<Chat/>}/>
