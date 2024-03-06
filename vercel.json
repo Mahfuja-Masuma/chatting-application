@@ -7,6 +7,18 @@
     {
       "src": "/chat",
       "dest": "/"
+    },
+    {
+      "src": "/signup",
+      "dest": "/"
+    },
+    {
+      "src": "/home",
+      "dest": "/"
+    },
+    {
+      "src": "/forgotpassword",
+      "dest": "/"
     }
   ]
   }
