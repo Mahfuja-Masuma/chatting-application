@@ -100,15 +100,15 @@ export const UserList = () => {
             <div key={i} className="flex items-center gap-12 mb-3">
               <div className="flex items-center gap-4">
                 <div className="img">
-                  <ProfilePicture imgId={item.id} />
+                  <ProfilePicture imgId={item?.id} />
                 </div>
                 <div>
-                  <h2>{item.username}</h2>
-                  <p>{item.email}</p>
+                  <h2>{item?.username}</h2>
+                  <p>{item?.email}</p>
                 </div>
               </div>
               <div>
-                {friendList.includes(item.id + data.uid) ||
+                {friendList.includes(item?.id + data.uid) ||
                 friendList.includes(data.uid + item.id) ? (
                   <button className="buttons_v_3">Friend</button>
                 ) : friendRequestList.includes(item.id + data.uid) ||

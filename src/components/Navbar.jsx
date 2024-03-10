@@ -87,7 +87,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="profileAndName">
           <div className="img relative group">
-            <img src={data.photoURL} className="w-full rounded-full" alt="profile picture" />
+            <img src={data?.photoURL} className="w-full rounded-full" alt="profile picture" />
             {/* <h2 className="defaultPPic">{data?.displayName[0]}</h2> */}
             <div
               onClick={() => setShowModal(true)}
@@ -137,10 +137,16 @@ const Navbar = () => {
             <h2>Update your Profile picture</h2>
             <input onChange={handlePPicture} className="my-7" type="file" />
           
-            <div className="h-[150px] w-[150px] mb-2 bg-red-500 rounded-full mx-auto overflow-hidden">
-            <div className="img-preview w-full h-full" />
-            {/* <img  src={data.photoURL ? "YOUR_DEFAULT_PROFILE_PICTURE_URL" : "img-preview"} alt="" /> */}
-          </div>
+          {
+            image && 
+            (
+              <div className="h-[150px] w-[150px] mb-2 bg-red-500 rounded-full mx-auto overflow-hidden">
+              
+              <div className="img-preview w-full h-full" />
+              {/* <img  src={data.photoURL ? "YOUR_DEFAULT_PROFILE_PICTURE_URL" : ""} alt="" /> */}
+            </div>
+            )
+          }
            
             {image &&
              (
