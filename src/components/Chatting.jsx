@@ -4,12 +4,13 @@ import { AiFillAudio } from "react-icons/ai";
 import ModalImage from "react-modal-image";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { getDatabase, onValue, push, ref, set } from "firebase/database";
-const image = "https://png.pngtree.com/thumb_back/fh260/background/20230519/pngtree-landscape-jpg-wallpapers-free-download-image_2573540.jpg"
-import { getStorage, ref as sref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import EmojiPicker from "./EmojiPicker";
-import ProfilePicture from "./ProfilePicture";
 
+// const image = "https://png.pngtree.com/thumb_back/fh260/background/20230519/pngtree-landscape-jpg-wallpapers-free-download-image_2573540.jpg"
+import { ref as sref, uploadBytesResumable, getDownloadURL, getStorage } from "firebase/storage";
+import EmojiPicker from "./EmojiPicker";
+import { getDatabase, onValue, push, ref, set } from "firebase/database";
+
+// import ProfilePicture from "./ProfilePicture";
 
 const Chatting = () => {
   const storage = getStorage();
@@ -56,14 +57,14 @@ const Chatting = () => {
   onValue(ref(db, 'singleMessage'), (snapshot)=> {
     let arr=[]
     snapshot.forEach((item)=> {
-      if(item.val().whoSendId==data.uid && item.val().whoReceiveId==activeChatName.active.id || item.val().whoReceiveId==data.uid && item.val().whoSendId==activeChatName.active.id){
+      if(item.val().whoSendId==data.uid && item.val().whoReceiveId==activeChatName.active?.id || item.val().whoReceiveId==data.uid && item.val().whoSendId==activeChatName.active.id){
       arr.push(item.val())
       }
 
     })
     setMessageList(arr)
   })
-  },[activeChatName.active.id])
+  },[activeChatName.active?.id])
   // Handle message send part end
 
   // images send from gellery start
@@ -133,7 +134,7 @@ uploadTask.on('state_changed',
 
 
 {
-activeChatName.active.status == "single"
+activeChatName.active?.status == "single"
 ?
 (
 messageList.map((item,i)=>{

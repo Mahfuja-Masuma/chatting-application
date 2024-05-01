@@ -108,11 +108,11 @@ export const UserList = () => {
                 </div>
               </div>
               <div>
-                {friendList.includes(item?.id + data.uid) ||
-                friendList.includes(data.uid + item.id) ? (
+                {friendList.includes(item?.id + data?.uid) ||
+                friendList.includes(data?.uid + item?.id) ? (
                   <button className="buttons_v_3">Friend</button>
-                ) : friendRequestList.includes(item.id + data.uid) ||
-                  friendRequestList.includes(data.uid + item.id) ? (
+                ) : friendRequestList.includes(item?.id + data?.uid) ||
+                  friendRequestList.includes(data?.uid + item?.id) ? (
                   <button className="buttons_v_3">Requset Send</button>
                 ) : (
                   <button
@@ -140,11 +140,11 @@ export const UserList = () => {
                 </div>
               </div>
               <div>
-                {friendList.includes(item.id + data.uid) ||
-                friendList.includes(data.uid + item.id) ? (
+                {friendList.includes(item?.id + data?.uid) ||
+                friendList.includes(data?.uid + item?.id) ? (
                   <button className="buttons_v_3">Friend</button>
-                ) : friendRequestList.includes(item.id + data.uid) ||
-                  friendRequestList.includes(data.uid + item.id) ? (
+                ) : friendRequestList.includes(item?.id + data?.uid) ||
+                  friendRequestList.includes(data?.uid + item?.id) ? (
                   <button className="buttons_v_3">Requset Send</button>
                 ) : (
                   <button
